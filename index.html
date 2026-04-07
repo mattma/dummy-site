@@ -28,13 +28,12 @@
     </style>
 </head>
 <body>
-    <h1>CI/CD Test Site</h1>
+    <h1>Dummy Site</h1>
     <p>This site is deployed via <strong>GitHub Actions</strong> to <strong>GitHub Pages</strong>.</p>
 
     <div class="deploy-info">
         <p>Branch: <span>main</span></p>
         <p>Deployed at: <span id="timestamp"></span></p>
-        <p>Commit: <span id="commit"></span></p>
     </div>
 
     <p>Every push to <code>main</code> triggers a rebuild and redeploy.</p>
@@ -42,7 +41,6 @@
 
     <script>
         document.getElementById('timestamp').textContent = new Date().toISOString();
-        document.getElementById('commit').textContent = 'local-dev';
     </script>
 </body>
 </html>
