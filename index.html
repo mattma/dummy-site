@@ -33,13 +33,16 @@
 
     <div class="deploy-info">
         <p>Deployed at: <span id="timestamp"></span></p>
+        <p>Commit: <span id="commit-hash">loading...</span></p>
     </div>
 
     <p>Every push to <code>main</code> triggers a rebuild and redeploy.</p>
     <p><a href="https://github.com/features/actions">Learn about GitHub Actions</a></p>
 
+    <script src="commit-info.js"></script>
     <script>
         document.getElementById('timestamp').textContent = new Date().toISOString();
+        document.getElementById('commit-hash').textContent = COMMIT_HASH;
     </script>
 </body>
 </html>
