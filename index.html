@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Test Site</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 640px;
+            margin: 80px auto;
+            padding: 0 20px;
+            background: #0d1117;
+            color: #e6edf3;
+        }
+        h1 { color: #58a6ff; }
+        .deploy-info {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .deploy-info span { color: #7ee787; }
+        a { color: #58a6ff; }
+    </style>
+</head>
+<body>
+    <h1>CI/CD Test Site</h1>
+    <p>This site is deployed via <strong>GitHub Actions</strong> to <strong>GitHub Pages</strong>.</p>
+
+    <div class="deploy-info">
+        <p>Branch: <span>main</span></p>
+        <p>Deployed at: <span id="timestamp"></span></p>
+        <p>Commit: <span id="commit"></span></p>
+    </div>
+
+    <p>Every push to <code>main</code> triggers a rebuild and redeploy.</p>
+    <p><a href="https://github.com/features/actions">Learn about GitHub Actions</a></p>
+
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toISOString();
+        document.getElementById('commit').textContent = 'local-dev';
+    </script>
+</body>
+</html>
